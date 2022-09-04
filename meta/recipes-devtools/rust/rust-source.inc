@@ -4,7 +4,8 @@ SRC_URI[rust.sha256sum] = "2d6aa2ea3fedd55acbbd65f78349385f9daa9c14e25db7a8df5d0
 SRC_URI:append:class-target:pn-rust = " \
     file://hardcodepaths.patch \
     file://crossbeam_atomic.patch \
-    file://0001-Add-ENOTSUP-constant-for-riscv32-musl.patch"
+    file://0001-Add-ENOTSUP-constant-for-riscv32-musl.patch \
+    file://rust-oe-selftest.patch;striplevel=1"
 SRC_URI:append:class-nativesdk:pn-nativesdk-rust = " file://hardcodepaths.patch"
 
 RUSTSRC = "${WORKDIR}/rustc-${PV}-src"
