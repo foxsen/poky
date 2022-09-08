@@ -14,12 +14,6 @@ do_compile () {
     rust_runx build --stage 2
 }
 
-do_test_compile[dirs] = "${B}"
-do_test_compile () {
-    rust_runx build src/tools/remote-test-server --target "${RUST_TARGET_SYS}"
-}
-addtask do_test_compile after do_configure do_rust_gen_targets
-
 do_compile:append:class-target () {
     rust_runx build --stage 2 src/tools/clippy
     rust_runx build --stage 2 src/tools/rustfmt
