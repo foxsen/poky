@@ -1,7 +1,7 @@
 # possible arch values are:
 #    aarch64 arm armeb alpha cris i386 x86_64 m68k microblaze
 #    mips mipsel mips64 mips64el ppc ppc64 ppc64abi32 ppcemb
-#    riscv32 riscv64 sparc sparc32 sparc32plus
+#    riscv32 riscv64 sparc sparc32 sparc32plus loongarch64
 
 def get_qemu_target_list(d):
     import bb

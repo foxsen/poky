@@ -36,6 +36,9 @@ def debian_arch_map(arch, tune):
         if "n32" in tune_features:
             return "mipsn32" + endian
         return "mips" + endian
+    if arch.startswith("loongarch"):
+        # todo 32bit support
+        return "loongarch64"
     if arch == "powerpc":
         return arch + ["", "spe"]["spe" in tune_features]
     if arch == "aarch64":

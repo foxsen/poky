@@ -291,6 +291,10 @@ changequote([,])dnl
          gl_cv_host_cpu_c_abi="${cpu}-${main_abi}${float_abi}"
          ;;
 
+       loongarch64 )
+         gl_cv_host_cpu_c_abi="${cpu}-lp64d"
+         ;;
+
        s390* )
          # On s390x, the C compiler may be generating 64-bit (= s390x) code
          # or 31-bit (= s390) code.

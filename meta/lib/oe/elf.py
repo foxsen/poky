@@ -28,6 +28,7 @@ def machine_dict(d):
                         "powerpc":    (20,     0,    0,          False,         32),
                         "riscv32":    (243,    0,    0,          True,          32),
                         "riscv64":    (243,    0,    0,          True,          64),
+                        "loongarch64":(258,    0,    0,          True,          64),
                       },
             "linux" : { 
                         "aarch64" :   (183,    0,    0,          True,          64),
@@ -62,6 +63,7 @@ def machine_dict(d):
                         "sparc":      ( 2,     0,    0,          False,         32),
                         "microblaze":  (189,   0,    0,          False,         32),
                         "microblazeel":(189,   0,    0,          True,          32),
+                        "loongarch64": (258,   0,    0,          True,          64),
                       },
             "linux-android" : {
                         "aarch64" :   (183,    0,    0,          True,          64),
@@ -93,6 +95,7 @@ def machine_dict(d):
                         "riscv32":    (243,      0,    0,          True,          32),
                         "riscv64":    (243,      0,    0,          True,          64),
                         "sh4":        (  42,     0,    0,          True,          32),
+                        "loongarch64": (258,   0,    0,            True,          64),
                       },
             "uclinux-uclibc" : {
                         "bfin":       ( 106,     0,    0,          True,         32),
