@@ -251,6 +251,7 @@ TARGET_ENDIAN[loongarch64] = "little"
 TARGET_POINTER_WIDTH[loongarch64] = "64"
 TARGET_C_INT_WIDTH[loongarch64] = "32"
 MAX_ATOMIC_WIDTH[loongarch64] = "64"
+FEATURES[loongarch64] = "+d"
 
 # Convert a normal arch (HOST_ARCH, TARGET_ARCH, BUILD_ARCH, etc) to something
 # rust's internals won't choke on.
@@ -295,7 +296,7 @@ def llvm_cpu(d):
     trans['mips64el'] = "mips64"
     trans['riscv64'] = "generic-rv64"
     trans['riscv32'] = "generic-rv32"
-    trans['loongarch64'] = "generic-la64"
+    trans['loongarch64'] = "la464"
 
     if target in ["mips", "mipsel", "powerpc"]:
         feat = frozenset(d.getVar('TUNE_FEATURES').split())
